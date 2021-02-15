@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         SetUpMoveBoundaries();
+        StartCoroutine(PrintToTheConsoleCoroutine());
     }
 
     // Update is called once per frame
@@ -28,6 +29,11 @@ public class Player : MonoBehaviour
         Fire();
     }
 
+    private IEnumerator PrintToTheConsoleCoroutine()
+    {
+        yield return new WaitForSeconds(3);
+        Debug.Log("I have waited three seconds");
+    }
     private void Fire()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -40,7 +46,6 @@ public class Player : MonoBehaviour
 
         }
     }
-
     private void Move()
     {
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
