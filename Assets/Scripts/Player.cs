@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         SetUpMoveBoundaries();
-        StartCoroutine(PrintToTheConsoleCoroutine());
     }
 
     // Update is called once per frame
@@ -29,23 +28,33 @@ public class Player : MonoBehaviour
         Fire();
     }
 
-    private IEnumerator PrintToTheConsoleCoroutine()
-    {
-        yield return new WaitForSeconds(3);
-        Debug.Log("I have waited three seconds");
-    }
     private void Fire()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            GameObject laser = Instantiate(
-                laserPrefab, 
-                transform.position, 
-                Quaternion.identity) as GameObject;
-            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
+            StartCoroutine(FireContinuously());
 
         }
     }
+
+    private IEnumerator FireContinuously()
+    {
+        while (true)
+        {
+            FireOneLaser();
+            yield return new WaitForSeconds(1);
+        }
+    }
+
+    private void FireOneLaser()
+    {
+        GameObject laser = Instantiate(
+                laserPrefab,
+                transform.position,
+                Quaternion.identity) as GameObject;
+        laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
+    }
+
     private void Move()
     {
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
