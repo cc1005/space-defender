@@ -69,6 +69,7 @@ public class Player : MonoBehaviour
     {
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         ProcessHit(damageDealer);
+        damageDealer.Hit();
     }
 
     private void ProcessHit(DamageDealer damageDealer)
