@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 6278446775357052066}
   - component: {fileID: 7864330180670402942}
   - component: {fileID: 274316016111490696}
+  - component: {fileID: -600521338861535652}
+  - component: {fileID: 4540646324988431972}
   m_Layer: 0
-  m_Name: Enemy2
+  m_Name: Ralph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,3 +96,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e3385eb98b05542a5b9dc861c6e5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-600521338861535652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3437108256244618590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a123bb7f04a5840b1e18c6e85db950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!68 &4540646324988431972
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3437108256244618590}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.45935324, y: 0.14399293}
+  - {x: -0.2383237, y: -0.40130234}
+  - {x: -0.11772347, y: -0.3727813}
+  - {x: -0.1821787, y: -0.112387925}
+  - {x: -0.15715834, y: -0.10288643}
+  - {x: -0.12094939, y: -0.15945812}
+  - {x: 0.10646221, y: -0.1536605}
+  - {x: 0.14841154, y: -0.100188084}
+  - {x: 0.17783186, y: -0.1085686}
+  - {x: 0.106864005, y: -0.3673287}
+  - {x: 0.2332721, y: -0.40693745}
+  - {x: 0.44547322, y: 0.14733867}
+  - {x: 0.2981093, y: 0.4090712}
+  - {x: 0.1040968, y: 0.3293484}
+  - {x: 0.08385334, y: 0.23045456}
+  - {x: -0.008565476, y: 0.23642525}
+  - {x: -0.09298208, y: 0.2382889}
+  - {x: -0.11021091, y: 0.3274169}
+  - {x: -0.28755033, y: 0.41380328}
+  - {x: -0.45283088, y: 0.17265052}
+  - {x: -0.46107227, y: 0.14116962}
