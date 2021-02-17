@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4919659040758036443}
   - component: {fileID: 4919659040758036440}
   - component: {fileID: 4919659040758036442}
+  - component: {fileID: -5447052629491419729}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -96,7 +97,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   wallPadding: 0.5
+  health: 200
   laserPrefab: {fileID: 7941107119550099971, guid: db5f3682725594e43bf16126c411fc48,
     type: 3}
   projectileSpeed: 20
   projectileFiringPeriod: 0.05
+--- !u!68 &-5447052629491419729
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4919659040758036441}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.59265757, y: -0.39846516}
+  - {x: -0.5950703, y: -0.29065132}
+  - {x: -0.5268198, y: -0.2938528}
+  - {x: -0.529621, y: -0.08537531}
+  - {x: -0.46711314, y: 0.12569118}
+  - {x: -0.40411013, y: -0.09396863}
+  - {x: -0.40845543, y: -0.28554416}
+  - {x: -0.19091818, y: -0.21439695}
+  - {x: -0.19762607, y: 0.0702157}
+  - {x: -0.07417938, y: 0.6312833}
+  - {x: 0.08554087, y: 0.6327982}
+  - {x: 0.1976026, y: 0.06741381}
+  - {x: 0.18597066, y: -0.19660711}
+  - {x: 0.41090208, y: -0.28719997}
+  - {x: 0.40856662, y: -0.10264516}
+  - {x: 0.45470673, y: 0.12605572}
+  - {x: 0.5122147, y: -0.092800856}
+  - {x: 0.5170958, y: -0.27613568}
+  - {x: 0.59369594, y: -0.274446}
+  - {x: 0.6011902, y: -0.3999586}
+  - {x: 0.25189152, y: -0.3917904}
+  - {x: 0.15187904, y: -0.49151683}
+  - {x: 0.15378764, y: -0.5958955}
+  - {x: 0.0008749366, y: -0.6380091}
+  - {x: -0.16199723, y: -0.59579086}
+  - {x: -0.15586865, y: -0.48494244}
+  - {x: -0.27627867, y: -0.3998947}
+  - {x: -0.59090173, y: -0.39846492}
