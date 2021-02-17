@@ -3,7 +3,8 @@ guid: 76e3385eb98b05542a5b9dc861c6e5bf
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - waveConfig: {fileID: 11400000, guid: f865a8b71624a6c4c8181e7206c10552, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
