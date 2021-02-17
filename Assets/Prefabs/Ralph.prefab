@@ -112,8 +112,11 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
-  enemyLaserPrefab: {fileID: 0}
+  enemyLaserPrefab: {fileID: 7941107119550099971, guid: da18e39156d244d44a64ba58ece6bf03,
+    type: 3}
   enemyProjectileSpeed: 0
+  explosion: {fileID: 1998622007819851190, guid: 8243c78edd5a9aa4a94c88e0747df036,
+    type: 3}
 --- !u!68 &4540646324988431972
 EdgeCollider2D:
   m_ObjectHideFlags: 0
