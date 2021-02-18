@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 192170285}
   - component: {fileID: 192170284}
   m_Layer: 5
-  m_Name: Heading
+  m_Name: Heading Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GAME OVER
+  m_text: LASER DEFENDER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 21efc02b913cdf64d93dc11c677271b3, type: 2}
   m_sharedMaterial: {fileID: -6133263191976177063, guid: 21efc02b913cdf64d93dc11c677271b3,
@@ -187,8 +187,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281743031
-  m_fontColor: {r: 0.7176471, g: 0.21176472, b: 0.21176472, a: 1}
+    rgba: 4284402792
+  m_fontColor: {r: 0.40955248, g: 0.8018868, b: 0.36690104, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 1048128866}
   - component: {fileID: 1048128865}
   m_Layer: 5
-  m_Name: Subheading
+  m_Name: Heading Text (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,8 +358,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -783.8}
-  m_SizeDelta: {x: 600, y: 287.21576}
+  m_AnchoredPosition: {x: 0, y: -571}
+  m_SizeDelta: {x: 600, y: 586.41125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048128865
 MonoBehaviour:
@@ -380,7 +380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I'm telling you those goddamn aliens
+  m_text: goddamn aliens
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 21efc02b913cdf64d93dc11c677271b3, type: 2}
   m_sharedMaterial: {fileID: -6133263191976177063, guid: 21efc02b913cdf64d93dc11c677271b3,
@@ -494,7 +494,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 154.50006}
-  m_SizeDelta: {x: 800, y: 209}
+  m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1218672840
 MonoBehaviour:
@@ -540,7 +540,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1763828772}
-        m_MethodName: LoadStartMenu
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MAIN MENU
+  m_text: QUIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 21efc02b913cdf64d93dc11c677271b3, type: 2}
   m_sharedMaterial: {fileID: -6133263191976177063, guid: 21efc02b913cdf64d93dc11c677271b3,
@@ -579,8 +579,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294946387
-  m_fontColor: {r: 0.3254717, g: 0.68369037, b: 1, a: 1}
+    rgba: 4281743031
+  m_fontColor: {r: 0.7169812, g: 0.21306516, b: 0.21306516, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 1740829988}
   - component: {fileID: 1740829987}
   m_Layer: 5
-  m_Name: Play again Button
+  m_Name: Start Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY AGAIN
+  m_text: START
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 21efc02b913cdf64d93dc11c677271b3, type: 2}
   m_sharedMaterial: {fileID: -6133263191976177063, guid: 21efc02b913cdf64d93dc11c677271b3,
@@ -905,19 +905,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740829985}
   m_CullTransparentMesh: 0
---- !u!114 &1763828772 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6765820750616129100, guid: 875079539d466e545b251b2b564a0746,
-    type: 3}
-  m_PrefabInstance: {fileID: 2043009489}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b0ea7611c14ff4c8f9ead0b2deaced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1889414537
+--- !u!1 &1758475290
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -925,9 +913,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1889414540}
-  - component: {fileID: 1889414539}
-  - component: {fileID: 1889414538}
+  - component: {fileID: 1758475293}
+  - component: {fileID: 1758475292}
+  - component: {fileID: 1758475291}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -935,13 +923,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1889414538
+--- !u!114 &1758475291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1889414537}
+  m_GameObject: {fileID: 1758475290}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
@@ -954,13 +942,13 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
---- !u!114 &1889414539
+--- !u!114 &1758475292
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1889414537}
+  m_GameObject: {fileID: 1758475290}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
@@ -969,13 +957,13 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!4 &1889414540
+--- !u!4 &1758475293
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1889414537}
+  m_GameObject: {fileID: 1758475290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -983,6 +971,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1763828772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6765820750616129100, guid: 875079539d466e545b251b2b564a0746,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043009489}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b0ea7611c14ff4c8f9ead0b2deaced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2043009489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1315,7 +1315,7 @@ PrefabInstance:
     - target: {fileID: 7339556370818135095, guid: c0b2b90ba3f54e54e90824e62fef04f0,
         type: 3}
       propertyPath: m_Name
-      value: Game Over Canvas
+      value: Start Menu Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0b2b90ba3f54e54e90824e62fef04f0, type: 3}
