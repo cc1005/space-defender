@@ -43,3 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13361bb342fe6884dab7e4a08ba7b08b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerScore: 100
+  pointsPerKill: 10
+  playerScoreText: {fileID: 0}

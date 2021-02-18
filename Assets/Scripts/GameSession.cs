@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameSession : MonoBehaviour
 {
+
+    [SerializeField] float playerScore = 100f;
+    [SerializeField] float pointsPerKill = 10f;
+    [SerializeField] TextMeshProUGUI playerScoreText;
 
     // Start is called before the first frame update
     void Awake()
@@ -16,20 +21,20 @@ public class GameSession : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        if (FindObjectsOfType(GetType()).Length > 1 || sceneName == "Start Menu")
+        if (sceneName == "Start Menu")
         {
             Destroy(gameObject);
         }
         else
         {
             DontDestroyOnLoad(gameObject);
-            Debug.Log("I will print if the score singleton has loaded");
+            playerScoreText.text = playerScore.ToString();
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddToScore()
     {
-        
+        playerScore += pointsPerKill;
+        playerScoreText.text = playerScore.ToString();
     }
 }

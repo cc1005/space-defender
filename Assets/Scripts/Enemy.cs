@@ -84,5 +84,6 @@ public class Enemy : MonoBehaviour
         Destroy(explosionInstance, durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
         Destroy(gameObject);
+        FindObjectOfType<GameSession>().AddToScore();
     }
 }
