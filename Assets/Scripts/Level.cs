@@ -10,11 +10,13 @@ public class Level : MonoBehaviour
 
     public void LoadStartMenu()
     {
+        FindObjectOfType<GameSession>().ResetGame();
         SceneManager.LoadScene(0);
     }
 
     public void LoadGame()
     {
+        FindObjectOfType<GameSession>().ResetGame();
         SceneManager.LoadScene("Level 1");
     }
 

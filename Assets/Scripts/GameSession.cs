@@ -7,11 +7,8 @@ using TMPro;
 public class GameSession : MonoBehaviour
 {
 
-    [SerializeField] float playerScore = 100f;
-    [SerializeField] float pointsPerKill = 10f;
-    [SerializeField] TextMeshProUGUI playerScoreText;
+    [SerializeField] int playerScore = 100;
 
-    // Start is called before the first frame update
     void Awake()
     {
         SetUpScoreSingleton();
@@ -19,22 +16,33 @@ public class GameSession : MonoBehaviour
 
     private void SetUpScoreSingleton()
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
-        if (sceneName == "Start Menu")
+
+        int numberGameSessions = FindObjectsOfType<GameSession>().Length;
+        if (numberGameSessions > 1)
         {
             Destroy(gameObject);
         }
         else
         {
             DontDestroyOnLoad(gameObject);
-            playerScoreText.text = playerScore.ToString();
         }
+        
     }
 
-    public void AddToScore()
+    public int GetScore()
     {
-        playerScore += pointsPerKill;
-        playerScoreText.text = playerScore.ToString();
+        return playerScore;
     }
+
+    public void AddToScore(int scoreValue)
+    {
+        playerScore += scoreValue;
+    }
+
+    public void ResetGame()
+    {
+        Destroy(gameObject);
+    }
+
+
 }

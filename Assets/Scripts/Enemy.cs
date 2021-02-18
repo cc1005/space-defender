@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float health = 100;
     [SerializeField] GameObject explosion;
     [SerializeField] float durationOfExplosion = 1f;
+    [SerializeField] int scoreValue = 10;
 
     [Header("Sound")]
     [SerializeField] AudioClip laserFireSound;
@@ -84,6 +85,6 @@ public class Enemy : MonoBehaviour
         Destroy(explosionInstance, durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
         Destroy(gameObject);
-        FindObjectOfType<GameSession>().AddToScore();
+        FindObjectOfType<GameSession>().AddToScore(scoreValue);
     }
 }
