@@ -88,7 +88,6 @@ public class Player : MonoBehaviour
     {
         health -= damageDealer.GetDamage();
         AudioSource.PlayClipAtPoint(playerImpactSound, Camera.main.transform.position, playerImpactSoundVolume);
-        Debug.Log(health);
         Die();
     }
 
@@ -103,6 +102,7 @@ public class Player : MonoBehaviour
                          transform.rotation);
             Destroy(explosionInstance, durationOfExplosion);
             Destroy(gameObject);
+            FindObjectOfType<Level>().LoadGameOver();
         }
     }
 
