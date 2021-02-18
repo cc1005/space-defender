@@ -102,6 +102,11 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 20
   projectileFiringPeriod: 0.05
+  playerFireSound: {fileID: 8300000, guid: 2cd8be38b5e7be24bb1878497192dcbb, type: 3}
+  playerDeathSound: {fileID: 8300000, guid: 2bab2742c75f04b4e8ff3d9d28c6c6e6, type: 3}
+  playerImpactSound: {fileID: 8300000, guid: 69b4986e90e01174e848b8c23c78e693, type: 3}
+  playerFireSoundVolume: 0.057
+  playerDeathSoundVolume: 1
 --- !u!68 &-5447052629491419729
 EdgeCollider2D:
   m_ObjectHideFlags: 0

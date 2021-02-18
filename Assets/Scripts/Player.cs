@@ -15,7 +15,15 @@ public class Player : MonoBehaviour
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileFiringPeriod = 0.1f;
 
-    Coroutine firingCoroutine;
+    [Header("Sound")]
+    [SerializeField] AudioClip playerFireSound;
+    [SerializeField] AudioClip playerDeathSound;
+    [SerializeField] AudioClip playerImpactSound;
+    [SerializeField] [Range(0, 1)] float playerFireSoundVolume = 0.5f;
+    [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.5f;
+    [SerializeField] [Range(0, 1)] float playerImpactSoundVolume = 0.5f;
+
+   Coroutine firingCoroutine;
 
     float xMin;
     float xMax;
@@ -52,6 +60,7 @@ public class Player : MonoBehaviour
         while (true)
         { 
             FireOneLaser();
+            AudioSource.PlayClipAtPoint(playerFireSound, Camera.main.transform.position, playerFireSoundVolume);
             yield return new WaitForSeconds(projectileFiringPeriod);
         }
     }
@@ -76,8 +85,15 @@ public class Player : MonoBehaviour
     private void ProcessHit(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
+        AudioSource.PlayClipAtPoint(playerImpactSound, Camera.main.transform.position, playerImpactSoundVolume);
+        Die();
+    }
+
+    private void Die()
+    {
         if (health <= 0)
         {
+            AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
             Destroy(gameObject);
         }
     }
