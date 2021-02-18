@@ -100,6 +100,9 @@ MonoBehaviour:
   moveSpeed: 10
   wallPadding: 0.5
   health: 200
+  explosion: {fileID: 1998622007819851190, guid: 8243c78edd5a9aa4a94c88e0747df036,
+    type: 3}
+  durationOfExplosion: 1
   laserPrefab: {fileID: 7941107119550099971, guid: db5f3682725594e43bf16126c411fc48,
     type: 3}
   projectileSpeed: 20
@@ -131,14 +134,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4919659040758036441}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float wallPadding;
     [SerializeField] int health = 200;
+    [SerializeField] GameObject explosion;
+    [SerializeField] float durationOfExplosion = 1f;
 
     [Header("Projectile")]
     [SerializeField] GameObject laserPrefab;
@@ -86,6 +88,7 @@ public class Player : MonoBehaviour
     {
         health -= damageDealer.GetDamage();
         AudioSource.PlayClipAtPoint(playerImpactSound, Camera.main.transform.position, playerImpactSoundVolume);
+        Debug.Log(health);
         Die();
     }
 
@@ -94,6 +97,11 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
+            GameObject explosionInstance = Instantiate(
+                         explosion,
+                         transform.position,
+                         transform.rotation);
+            Destroy(explosionInstance, durationOfExplosion);
             Destroy(gameObject);
         }
     }

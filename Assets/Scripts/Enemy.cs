@@ -60,7 +60,10 @@ public class Enemy : MonoBehaviour
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
         ProcessHit(damageDealer);
-        damageDealer.Hit();
+        if (other.gameObject.layer == 10)
+        {
+            damageDealer.Hit();
+        } 
     }
 
     private void ProcessHit(DamageDealer damageDealer)
