@@ -20,6 +20,5 @@ public class HealthDisplay : MonoBehaviour
     void Update()
     {
         playerHealthText.text = player.PublishHealthRemaining().ToString();
-        Debug.Log("The Health text should have linked up");
     }
 }
