@@ -88,7 +88,13 @@ public class Player : MonoBehaviour
     {
         health -= damageDealer.GetDamage();
         AudioSource.PlayClipAtPoint(playerImpactSound, Camera.main.transform.position, playerImpactSoundVolume);
+        PublishHealthRemaining();
         Die();
+    }
+
+    public int PublishHealthRemaining()
+    {
+        return health;
     }
 
     private void Die()
